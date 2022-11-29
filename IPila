@@ -1,0 +1,9 @@
+
+package EstructuraDeDatosEjercicios;
+interface IPila {
+        public boolean estaVacia ();
+        public boolean estaLlena ();
+        public boolean agregar (Nodo n);
+        public boolean eliminar ();
+        public void mostrar ();
+}
