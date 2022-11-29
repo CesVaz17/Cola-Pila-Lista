@@ -1,0 +1,59 @@
+package EstructuraDeDatosEjercicios;
+public class Cola implements ICola{
+    private Nodo inicio;
+    private Nodo fin;
+    private int tamañoActual;
+    private int tamañoMaximo;
+
+    public Cola(int tamañoMaximo){
+        this.tamañoMaximo=tamañoMaximo;
+        tamañoActual=0;
+        inicio=null;
+        fin=null;
+    }
+    @Override
+    public boolean estaVacia() {
+        return tamañoActual ==0;
+    }
+
+    @Override
+    public boolean estaLlena() {
+        return tamañoActual== tamañoMaximo;
+    }
+
+    @Override
+    public boolean agregar(Nodo n) {
+        if(!estaLlena()){
+            if (fin==null){
+                fin.setSiguiente(n); 
+                fin=fin.getSiguiente(); //o fin=n;
+            }else{
+                inicio=n;
+                fin=n;
+            }
+            tamañoActual++;
+            return true;
+        }
+        return false;
+    }
+
+    @Override
+    public Nodo eliminar(Nodo n) {
+        return null;
+    }
+
+    @Override
+    public void mostrar() {
+        Nodo nodo=inicio;
+        int contador=0;
+        while(nodo!=null){
+            System.out.println("Nodo " + ++contador);
+            System.out.println(nodo.getDato());
+            nodo = nodo.getSiguiente();
+        }
+        
+    }
+    
+    
+    
+}
