@@ -1,0 +1,12 @@
+package EstructuraDeDatosEjercicios;
+public interface ICola {
+    public boolean estaVacia ();
+    public boolean estaLlena ();
+    public boolean agregar (Nodo n);
+    public Nodo eliminar (Nodo n);
+    //public Nodo buscar(Nodo n);
+    //public Nodo buscar (int indice);
+    
+    //Solo para imprimir los elementos existentes
+    public void mostrar ();
+}
